@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+    background-color: lightgrey;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+}
+
+.gridcontainer_index {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.gridcontainer_servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+.header {
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    grid-column: 1 / span 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 60px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.header li {
+    display: inline-block;
+    padding: 0px 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.header li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.header li a:hover {
+    transition: 1s ease;
+    color: crimson;
+}
+
+.multimedia_index {
+    margin-left: 10px;
+    background-color: crimson;
+    color: white;
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_index {
+    inline-size: 100%;
+}
+
+.main_index {
+    margin-left: 10px;
+    background-color: white;
+    color: black;
+    grid-column: 1 / span 2;
+}
+
+.main_servicios {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    color: black;
+    grid-column: 1 / span 3;
+}
+
+
+h1 {
+    color: crimson;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.main_index_p {
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.main_servicios_p {
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.servicios_cards {
+    background-color: crimson;
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cards {
+    border: 2px solid black;
+    margin: 10px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside_index {
+    margin-right: 10px;
+    background-color: crimson;
+    color: white;
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 20px 20px 20px;
+}
+
+.aside_index_title {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.aside_index_p {
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.footer {
+    padding: 10px 20px 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    grid-column: 1 / span 3;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+
+    .gridcontainer_index
+        {
+        grid-gap: 0px;
+    }
+
+    .gridcontainer_index .header {
+        grid-row: 1;
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header li {
+        display: flex;
+    }
+
+    .gridcontainer_index .multimedia_index {
+        grid-row: 2;
+        grid-column: 1 / -1;
+        margin-left: 0px;
+    }
+
+    .gridcontainer_index .main_index {
+        grid-row: 3;
+        grid-column: 1 / -1;
+        margin-left: 0px
+    }
+
+    .gridcontainer_index .aside_index {
+        grid-row: 4;
+        grid-column: 1 / -1;
+        margin-right: 0px;
+    }
+
+    .gridcontainer_index .footer {
+        grid-row: 5;
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .gridcontainer_servicios
+        {
+        grid-gap: 0px;
+    }
+
+    .gridcontainer_servicios .header {
+        grid-row: 1;
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .gridcontainer_servicios .footer {
+        grid-row: 5;
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .servicios_cards {
+        background-color: crimson;
+        grid-column: 1 / span 3;
+        display: flex;
+        flex-direction: column;
+    }
+}
