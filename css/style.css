@@ -25,7 +25,7 @@ body {
 }
 
 .header {
-    background-color: black;
+    background-image: linear-gradient(to left, red , yellow);
     padding-left: 20px;
     padding-right: 20px;
     color: white;
@@ -91,6 +91,7 @@ body {
 
 
 h1 {
+    transform: rotate(-3deg);
     color: crimson;
     text-align: center;
     padding-top: 20px;
@@ -98,6 +99,7 @@ h1 {
 }
 
 .main_index_p {
+    
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;
@@ -105,6 +107,7 @@ h1 {
 }
 
 .main_servicios_p {
+    transform: rotate(-3deg);
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;
@@ -112,6 +115,7 @@ h1 {
 }
 
 .servicios_cards {
+    transform: rotate(-3deg);
     background-color: crimson;
     grid-column: 1 / span 3;
     display: grid;
